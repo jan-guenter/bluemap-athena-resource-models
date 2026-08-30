@@ -1,0 +1,104 @@
+{
+  "schema": 1,
+  "component": "bluemap-athena-resource-models",
+  "version": "0.1.0-alpha.1",
+  "source_origin": {
+    "repository": "https://github.com/jan-guenter/bluemap-chipped-addon",
+    "earliest_matching_history_commit": "ea72b4335dc9cabe1800212ed11fc76a510ed55c",
+    "earliest_commit_subject": "Implement exact Chipped connected rendering",
+    "frozen_release_snapshot": "c474a82b6bfd1b4173d119cb1e053a5458167e4b",
+    "frozen_release_subject": "Merge pull request #1 from jan-guenter/feature/chipped-rendering",
+    "license": "MIT",
+    "tag_containing_origin": "v0.1.0-alpha.1"
+  },
+  "portfolio_evidence": {
+    "matching_consumers": [
+      {
+        "addon": "chipped",
+        "current_commit": "26df095af693d36c75b4d82738736157be3d1f9d",
+        "release_commit": "c474a82b6bfd1b4173d119cb1e053a5458167e4b",
+        "current_src_tree": "e4b5983536f23248d2cc80aeec6127929541aff6"
+      },
+      {
+        "addon": "chisel",
+        "current_commit": "6553da70621f6039db5f0fb961c2843a1c36988d",
+        "release_commit": "f9131a5143062e2045cf26823aabb8628bb5d94d",
+        "current_src_tree": "89d6e59cb3469ba936606320d3c7c655123edfb9"
+      },
+      {
+        "addon": "cobblefurnies",
+        "current_commit": "90ca220d0fa4d4dfd258fd54b14b8b2606a0975d",
+        "release_commit": "eea5407dbbd162cbe4dd8fc5bc247f6617cf5d98",
+        "current_src_tree": "04ceb5104b8295645d8b38357f1a519fc12a0d8b"
+      },
+      {
+        "addon": "factory-blocks",
+        "current_commit": "667c601c92357b7e757aaae78393cbe45f531456",
+        "release_commit": "ad9ee2bcf0e2886ee88931f1eaf50ccb4b8a03bd",
+        "current_src_tree": "68ae66e791a571ab22b56914bfdaf5cfa80ef0a1"
+      }
+    ],
+    "athena_artifact_context": {
+      "filename": "athena-neoforge-1.21.1-4.0.6.jar",
+      "size": 99944,
+      "sha256": "43699885bbce3343916d4c5c4940cf0e3f9f6f02fdeb46e8655e121b42282ec5",
+      "license": "MIT",
+      "relationship": "behavior-and-resource-evidence-only"
+    }
+  },
+  "transformation": "Each production source changes its package from io.github.janguenter.bluemap.chipped.model to io.github.janguenter.bluemap.resource.athena.model. CubeFace also replaces its Chipped-specific Javadoc with neutral Athena wording.",
+  "sources": [
+    {
+      "origin_path": "src/main/java/io/github/janguenter/bluemap/chipped/model/CtmTextureRole.java",
+      "production_path": "src/main/java/io/github/janguenter/bluemap/resource/athena/model/CtmTextureRole.java",
+      "oracle_path": "src/test/java/io/github/janguenter/bluemap/chipped/model/CtmTextureRole.java",
+      "origin_sha256": "0aa765ced5d2a2de61230ec81401a5a16022df59a094d286ab7350b4a2a7872f",
+      "normalizations": [
+        {
+          "from": "package io.github.janguenter.bluemap.resource.athena.model;",
+          "to": "package io.github.janguenter.bluemap.chipped.model;"
+        }
+      ]
+    },
+    {
+      "origin_path": "src/main/java/io/github/janguenter/bluemap/chipped/model/CtmSelector.java",
+      "production_path": "src/main/java/io/github/janguenter/bluemap/resource/athena/model/CtmSelector.java",
+      "oracle_path": "src/test/java/io/github/janguenter/bluemap/chipped/model/CtmSelector.java",
+      "origin_sha256": "2200cf7e82a36ad637edd2469e6a4c738ed8a5330e8b289cb9d6a407e926a27b",
+      "normalizations": [
+        {
+          "from": "package io.github.janguenter.bluemap.resource.athena.model;",
+          "to": "package io.github.janguenter.bluemap.chipped.model;"
+        }
+      ]
+    },
+    {
+      "origin_path": "src/main/java/io/github/janguenter/bluemap/chipped/model/CtmConnections.java",
+      "production_path": "src/main/java/io/github/janguenter/bluemap/resource/athena/model/CtmConnections.java",
+      "oracle_path": "src/test/java/io/github/janguenter/bluemap/chipped/model/CtmConnections.java",
+      "origin_sha256": "bbec897e32aa5b1dcacaf2390d5f13385cca84437f33acba51e8c1f91461cb2f",
+      "normalizations": [
+        {
+          "from": "package io.github.janguenter.bluemap.resource.athena.model;",
+          "to": "package io.github.janguenter.bluemap.chipped.model;"
+        }
+      ]
+    },
+    {
+      "origin_path": "src/main/java/io/github/janguenter/bluemap/chipped/model/CubeFace.java",
+      "production_path": "src/main/java/io/github/janguenter/bluemap/resource/athena/model/CubeFace.java",
+      "oracle_path": "src/test/java/io/github/janguenter/bluemap/chipped/model/CubeFace.java",
+      "origin_sha256": "21c67c1f962f45bd810f7251b4a06e24fdfa9a530795fffc4493b0746b3fb2f0",
+      "normalizations": [
+        {
+          "from": "package io.github.janguenter.bluemap.resource.athena.model;",
+          "to": "package io.github.janguenter.bluemap.chipped.model;"
+        },
+        {
+          "from": "/** World-space face plus the installed Athena model's UV basis. */",
+          "to": "/** World-space face plus the installed-model UV basis used by Chipped. */"
+        }
+      ]
+    }
+  ]
+}
